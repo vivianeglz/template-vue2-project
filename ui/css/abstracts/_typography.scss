@@ -1,0 +1,62 @@
+/* === Variables === */
+
+/* Font weights */
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+/* font family */
+$font-family-title: "Playfair Display", serif;
+$font-family-body: "Poppins", sans-serif;
+
+/* === Headings === */
+
+@mixin text-heading-xl {
+  @include media(medium) {
+  }
+}
+
+@mixin text-heading-l {
+  @include media(medium) {
+  }
+}
+
+@mixin text-heading-m {
+  @include media(medium) {
+  }
+}
+
+@mixin text-heading-s {
+  @include media(medium) {
+  }
+}
+
+@mixin text-heading($size) {
+  @if $size == "xl" {
+    @include text-heading-xl;
+  }
+
+  @if $size == "l" {
+    @include text-heading-l;
+  }
+
+  @if $size == "m" {
+    @include text-heading-m;
+  }
+
+  @if $size == "s" {
+    @include text-heading-s;
+  }
+}
+
+/* Body */
+@mixin text-body-s {
+  @include media(medium) {
+  }
+}
+
+@mixin text-body($size) {
+  @if $size == "s" {
+    @include text-body-s;
+  }
+}

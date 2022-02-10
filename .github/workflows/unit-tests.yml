@@ -1,0 +1,45 @@
+name: Unit tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.18.2"
+          cache: "npm"
+          cache-dependency-path: |
+            ui/package-lock.json
+            client/package-lock.json
+            api/package-lock.json
+            package-lock.json
+
+      - name: Install ui dependencies
+        working-directory: ui
+        run: npm ci --ignore-scripts
+
+      # - name: Install client dependencies
+      #   working-directory: client
+      #   run: npm ci --ignore-scripts
+
+      # - name: Install api dependencies
+      #   working-directory: api
+      #   run: npm ci --ignore-scripts
+
+      - name: Install root dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run unit tests
+        run: npm run test

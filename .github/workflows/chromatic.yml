@@ -1,0 +1,41 @@
+name: Deploy Chromatic
+
+on:
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - production
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.18.2"
+          cache: "npm"
+          cache-dependency-path: |
+            ui/package-lock.json
+            package-lock.json
+
+      - name: Install ui dependencies
+        working-directory: ui
+        run: npm ci
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          workingDir: ui
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

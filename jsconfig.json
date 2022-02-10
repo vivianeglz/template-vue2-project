@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDirs": ["ui"],
+    "target": "esnext",
+    "paths": {
+      "@ui/*": ["./ui/*"],
+      "@common/*": ["./common/*"]
+    }
+  },
+  "exclude": ["node_modules", "ui/node_modules", "client/node_modules"]
+}

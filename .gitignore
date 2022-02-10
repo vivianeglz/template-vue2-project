@@ -1,0 +1,35 @@
+############################
+# GLOBAL
+############################
+.DS_Store
+*.csv
+*.zip
+*.sql
+*.log
+.tmp
+node_modules
+.env
+.env.*
+!.env.example
+.vscode
+.history
+
+############################
+# API
+############################
+.strapi-updater.json
+exports
+*.cache
+build
+
+############################
+# UI
+############################
+storybook-static
+
+############################
+# CLIENT
+############################
+.nuxt
+dist
+.cache
