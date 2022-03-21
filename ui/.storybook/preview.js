@@ -10,5 +10,12 @@ export const parameters = {
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS
+  },
+  options: {
+    storySort: {
+      method: "",
+      order: ["globals", "segments", "pages"],
+      locales: ""
+    }
   }
 };
