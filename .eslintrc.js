@@ -40,13 +40,7 @@ module.exports = {
         ]
       }
     ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        /* Register all directories with package.json inside */
-        packageDir: ["./", "./api", "./client", "./ui"]
-      }
-    ],
+    "import/no-extraneous-dependencies": 0,
     "no-shadow": [
       "error",
       {
