@@ -14,12 +14,12 @@ describe("Button Primary", () => {
   it("Button Primary - renders the correct default props", () => {
     const wrapper = factory();
     expect(wrapper.find("button").exists()).toBe(true);
-    expect(wrapper.classes()).toContain("button-primary--m");
+    expect(wrapper.classes()).toContain("button--s");
   });
 
   it("Button Primary - renders the correct default template in function of props", () => {
-    const wrapper = factory({ size: "s", tag: "a" });
-    expect(wrapper.classes()).toContain("button-primary--s");
+    const wrapper = factory({ size: "m", tag: "a" });
+    expect(wrapper.classes()).toContain("button--m");
     expect(wrapper.find("a").exists()).toBe(true);
   });
 });
