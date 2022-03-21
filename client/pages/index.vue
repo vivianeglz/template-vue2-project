@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <h1>Accueil</h1>
-  </div>
+  <page-example />
 </template>
 
 <script>
+import PageExample from '@ui/components/pages/page-example'
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    PageExample
+  }
 };
 </script>
