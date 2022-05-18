@@ -3,10 +3,10 @@
     <header-primary title="Example" description="Page's description" />
     <flex-container class="margin--top--l">
       <flex-item xs12 s6>
-        <p>Bloc 1</p>
+        <p>Bloc TEST</p>
       </flex-item>
       <flex-item xs12 s6>
-        <p>Bloc 2</p>
+        <p>Bloc TEST</p>
       </flex-item>
     </flex-container>
   </div>
