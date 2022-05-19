@@ -1,0 +1,19 @@
+{
+  "name": "template-vue2-project-documentation",
+  "version": "1.0.0",
+  "description": "Project documentation.",
+  "main": "index.js",
+  "scripts": {
+    "docs": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.22.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4"
+  }
+}
