@@ -1,6 +1,6 @@
 # template-vue2-project
 
-Vue 2 project's template with storybook, nuxt, jest and chromatic
+Vue 2 project's template with storybook, nuxt, jest, chromatic and vitepress
 
 ### Prerequisites
 
@@ -11,14 +11,11 @@ Vue 2 project's template with storybook, nuxt, jest and chromatic
 ### Project setup :
 
 - Clone the project
-
 - Go to the project's root and run `nvm use` to use the correct Node's version
-
 - Stay at the project's root and run `npm ci`
-
 - Go to the `ui` folder and run `npm ci`
-
 - Go to the `client` folder and run `npm ci`
+- Go to the `documentation` folder and run `npm ci`
 
 ### Run Storybook :
 
@@ -31,6 +28,16 @@ Vue 2 project's template with storybook, nuxt, jest and chromatic
 ### Run tests :
 
 - Go to the project's root and run `npm run test`
+
+### Run documentation :
+
+- Go to the `documentation` folder and run `npm run docs`
+
+### Workflow :
+
+There are 2 github actions related to the project:
+- A first one that runs the tests at each PR open on the main branch
+- A second one that runs the build of ui on chromatic at each PR open on the production branch
 
 ### :warning: Good to remember :warning:
 
