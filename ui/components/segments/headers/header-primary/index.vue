@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ButtonPrimary from "@ui/components/globals/buttons/button-primary";
+import { ButtonPrimary } from "@ui/components/globals/buttons";
 
 export default {
   name: "HeaderPrimary",
